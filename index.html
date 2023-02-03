@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memeify</title>
+  </head>
+  <body>
+    <header>
+      <h1>Memeify</h1>
+      <p>I create memes before I turn into one</p>
+      <link rel="stylesheet" href="style.css" />
+    </header>
+    <main>
+      <section>
+        <form action="" method="post">
+          <ul>
+            <li>
+              <label for="image-url">*Image URL</label>
+              <input
+                type="text"
+                id="image-url"
+                name="image_url"
+                placeholder="Paste the url of your image here"
+                required
+              />
+            </li>
+            <li>
+              <label for="top-text">Text On Top</label>
+              <input
+                type="text"
+                id="image-u"
+                name="top_text"
+                placeholder="Some optional text on top"
+                maxlength="20"
+              />
+            </li>
+            <li>
+              <label for="bottom-text">Text on Bottom</label>
+              <input
+                type="text"
+                id="bottom-text"
+                name="bottom_text"
+                placeholder="Some optional text on bottom"
+                maxlength="20"
+              />
+            </li>
+            <li class="button">
+              <button type="submit">Add meme</button>
+            </li>
+          </ul>
+        </form>
+      </section>
+      <section>
+        <div class="meme-display"></div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

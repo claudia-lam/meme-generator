@@ -1,0 +1,36 @@
+button,
+input {
+  font-family: inherit;
+  font-size: 100%;
+  /* Box Sizing */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+label {
+  /* Uniform size & alignment */
+  display: inline-block;
+  width: 150px;
+  text-align: left;
+}
+
+input {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+  width: 50%;
+
+  /* Match form field borders */
+  border: 1px solid #999;
+}
+
+button:focus {
+  outline: 4px solid green;
+}
