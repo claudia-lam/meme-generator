@@ -34,3 +34,34 @@ input {
 button:focus {
   outline: 4px solid green;
 }
+
+.meme-container {
+  width: 500px;
+  height: 300px;
+  position: relative;
+}
+
+.meme-container > img {
+  width: 500px;
+  height: 300px;
+}
+
+.top-text,
+.bottom-text {
+  font-family: "Oswald", sans-serif;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-transform: uppercase;
+  position: absolute;
+  font-size: 40px;
+}
+
+.top-text {
+  top: 1%;
+  left: 20%;
+}
+
+.bottom-text {
+  bottom: 1%;
+  left: 20%;
+}
