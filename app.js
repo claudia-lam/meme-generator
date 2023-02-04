@@ -1,30 +1,34 @@
 const memes = [];
-//declare a generateMeme function
+
 function displayMeme(e) {
   //stop the form from submitting
   e.preventDefault();
   createImg();
-  // createObj();
-  createText("top");
-  createText("bottom");
   document.querySelector("form").reset();
 }
 
-const memeDisplay = document.querySelector(".meme-container");
-
 function createImg() {
+  const memeDisplay = document.querySelector(".meme-container");
+  const newDiv = document.createElement("div");
+  //add a new div to memeDisplay
+  newDiv.classList.add("meme-div");
+  memeDisplay.append(newDiv);
+  //add a new image to new div
   const imgURL = document.getElementById("image-url").value;
   const newImg = document.createElement("img");
   newImg.src = `${imgURL}`;
-  memeDisplay.append(newImg);
+  newDiv.append(newImg);
+  //add text to image
+  createText("top", newDiv);
+  createText("bottom", newDiv);
 }
 
-function createText(textPosition) {
+function createText(textPosition, parentNode) {
   const memeText = document.getElementById(`${textPosition}-text`).value;
   const newText = document.createElement("div");
   newText.classList.add(`${textPosition}-text`);
   newText.innerText = `${memeText}`;
-  memeDisplay.append(newText);
+  parentNode.append(newText);
 }
 
 // //declare a meme object

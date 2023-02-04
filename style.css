@@ -38,6 +38,9 @@ button:focus {
 .meme-container {
   width: 500px;
   height: 300px;
+}
+
+.meme-div {
   position: relative;
 }
 
