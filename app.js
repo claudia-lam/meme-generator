@@ -26,6 +26,9 @@ function createImg() {
   createText("top", newDiv);
   createText("bottom", newDiv);
   createDeleteButton(newDiv);
+  //delete all memes
+  const allNewDivs = document.querySelectorAll(".meme-div");
+  deleteAllMemes(allNewDivs);
 }
 
 function createText(textPosition, parentNode) {
@@ -51,6 +54,16 @@ function deleteMeme(deleteElement) {
       deleteElement[i].parentElement.style.display = "none";
     });
   }
+}
+
+function deleteAllMemes(allMemes) {
+  const deleteAllBtn = document.querySelector("#delete-all");
+  const allMemesArr = Array.from(allMemes);
+  deleteAllBtn.addEventListener("click", function () {
+    for (const meme of allMemesArr) {
+      meme.style.display = "none";
+    }
+  });
 }
 
 const memeForm = document.querySelector("#meme-form");

@@ -152,6 +152,7 @@ input {
   padding: 20px;
   border-radius: 20px;
   box-shadow: 2px 2px 40px rgb(209, 58, 189, 0.3);
+  position: relative;
   /*flexbox*/
   display: flex;
   flex-wrap: wrap;
@@ -204,4 +205,11 @@ input {
   top: 0;
   font-size: 70px;
   margin-top: -20px;
+}
+
+#delete-all {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #bb34a9;
 }
