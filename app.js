@@ -1,11 +1,15 @@
 function displayMeme(e) {
   //stop the form from submitting
   e.preventDefault();
+  console.log(e);
+  // createNewDiv();
   createImg();
   document.querySelector("form").reset();
 }
 
 const memeDisplay = document.querySelector(".meme-display");
+
+// function createNewDiv() {}
 
 function createImg() {
   //add a new div to memeDisplay
@@ -16,6 +20,7 @@ function createImg() {
   const imgURL = document.getElementById("image-url").value;
   const newImg = document.createElement("img");
   newImg.src = `${imgURL}`;
+  newImg.setAttribute("id", "meme-img");
   newDiv.append(newImg);
   //add text to image
   createText("top", newDiv);
@@ -48,5 +53,5 @@ function deleteMeme(deleteElement) {
   }
 }
 
-const addMemeBtn = document.querySelector(".add-meme-btn");
-addMemeBtn.addEventListener("click", displayMeme);
+const memeForm = document.querySelector("#meme-form");
+memeForm.addEventListener("submit", displayMeme);
