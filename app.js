@@ -1,31 +1,31 @@
 function displayMeme(e) {
   //stop the form from submitting
   e.preventDefault();
-  console.log(e);
-  // createNewDiv();
-  createImg();
+  createNewDiv();
   document.querySelector("form").reset();
 }
 
 const memeDisplay = document.querySelector(".meme-display");
 
-// function createNewDiv() {}
-
-function createImg() {
+function createNewDiv() {
   //add a new div to memeDisplay
   const newDiv = document.createElement("div");
   newDiv.classList.add("meme-div");
   memeDisplay.append(newDiv);
+  createImg(newDiv);
+}
+
+function createImg(parentNode) {
   //add a new image to new div
   const imgURL = document.getElementById("image-url").value;
   const newImg = document.createElement("img");
   newImg.src = `${imgURL}`;
   newImg.setAttribute("id", "meme-img");
-  newDiv.append(newImg);
+  parentNode.append(newImg);
   //add text to image
-  createText("top", newDiv);
-  createText("bottom", newDiv);
-  createDeleteButton(newDiv);
+  createText("top", parentNode);
+  createText("bottom", parentNode);
+  createDeleteButton(parentNode);
   //delete all memes
   const allNewDivs = document.querySelectorAll(".meme-div");
   deleteAllMemes(allNewDivs);
