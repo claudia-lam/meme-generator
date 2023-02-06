@@ -16,11 +16,11 @@
   <body>
     <header>
       <h1>Memeify</h1>
-      <p>I create memes before I turn into one</p>
+      <p>I am once again asking for your meme</p>
       <link rel="stylesheet" href="style.css" />
     </header>
     <main>
-      <section>
+      <section class="form-section">
         <form action="" method="post" id="meme-form">
           <ul>
             <li>
@@ -39,7 +39,7 @@
                 type="text"
                 id="top-text"
                 name="top_text"
-                placeholder="Some optional text on top"
+                placeholder="optional text"
                 maxlength="30"
               />
             </li>
@@ -49,17 +49,17 @@
                 type="text"
                 id="bottom-text"
                 name="bottom_text"
-                placeholder="Some optional text on bottom"
+                placeholder="optional text"
                 maxlength="30"
               />
             </li>
-            <li>
+            <li id="submit-button-container">
               <button type="submit" id="add-meme-btn">Add meme</button>
             </li>
           </ul>
         </form>
       </section>
-      <section>
+      <section class="meme-section">
         <div class="meme-display"></div>
       </section>
     </main>
