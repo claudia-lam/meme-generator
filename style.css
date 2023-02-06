@@ -1,5 +1,4 @@
-CSS Reset
-
+/*CSS Reset*/
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -73,22 +72,46 @@ h6 {
   isolation: isolate;
 }
 
-/*General Styling*/
+/*******************************************************/
+/********************General Styling********************/
+/*******************************************************/
 
 body {
   text-align: center;
   background-image: linear-gradient(to left top, #eebd89, #bb34a9);
-  font-family: "Fredoka One", cursive;
   padding: 20px 30px;
-  font-size: 20px;
+  font: 20px "Fredoka One", cursive;
   color: whitesmoke;
 }
 
 h1 {
-  font-family: "Shrikhand", cursive;
-  font-size: 80px;
+  font: 80px "Shrikhand", cursive;
   color: #ecaf6d;
   text-shadow: 4px 2px 5px #f58104;
+}
+
+/*Form*/
+.form-section {
+  padding: 20px 0;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 5px 0;
+}
+
+label {
+  display: inline-block;
+  width: 200px;
+  text-align: left;
+}
+
+input {
+  width: 50%;
+  border: none;
 }
 
 button,
@@ -107,40 +130,13 @@ input {
 
 button {
   cursor: pointer;
-  background-color: #6dcbed;
+  background-color: #ecaf6d;
   color: white;
   border: none;
   padding: 15px 30px;
   text-decoration: none;
   font-size: 20px;
 }
-
-ul {
-  list-style: none;
-}
-
-li {
-  padding: 5px 0;
-}
-
-label {
-  display: inline-block;
-  width: 150px;
-  text-align: left;
-  padding-right: 20px;
-}
-
-input {
-  font: 1em sans-serif;
-  width: 50%;
-  border: none;
-}
-
-.form-section {
-  padding: 20px 0;
-}
-
-/*Meme Display*/
 
 /*Meme Images*/
 .meme-display {
@@ -167,12 +163,6 @@ input {
   width: 500px;
 }
 
-.meme-div > img {
-  width: 100%;
-  height: auto;
-  position: relative;
-}
-
 /*Meme Text*/
 .top-text,
 .bottom-text {
@@ -195,7 +185,7 @@ input {
   left: 20%;
 }
 
-/*Delete Button*/
+/*Delete Buttons*/
 
 .close {
   cursor: pointer;
