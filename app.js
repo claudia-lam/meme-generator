@@ -18,7 +18,7 @@ function createNewDiv() {
   return newDiv;
 }
 
-function createImg(parentNode) {
+function createImg() {
   const imgURL = document.getElementById("image-url").value;
   const newImg = document.createElement("img");
   newImg.src = `${imgURL}`;
